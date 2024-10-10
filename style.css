@@ -2,9 +2,201 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Poppins";
 }
 :root {
-  --c1: rgba(221, 221, 221, 1);
-  --c2: white;
-  --c3: rgba(235, 103, 83, 1);
+  --c1--: rgba(221, 221, 221, 0.356);
+  --c2--: white;
+  --c3--: rgba(235, 103, 83, 1);
+}
+body {
+  background-color: var(--c1--);
+}
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/*header*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.logo {
+  font-size: 1.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.nav-links a {
+  margin: 3.2em;
+}
+
+.contact img,
+.login img,
+.btn-addProperty img {
+  width: 15px;
+  margin-right: 0.3em;
+}
+.nav-links .contact,
+.nav-links .login {
+  margin: 15px;
+}
+.nav-links .contact {
+  margin-left: 6em;
+}
+.btn-addProperty {
+  padding: 0.5em 0.8em;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--c3--);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  cursor: pointer;
+}
+.icon-menu {
+  display: none;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+/*responsive*/
+@media only screen and (min-width: 1400px) and (max-width: 1552px) {
+  .nav-links {
+    font-size: 20px;
+  }
+  .nav-links a {
+    margin: 43px;
+  }
+  .logo {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 1167px) and (max-width: 1399px) {
+  .nav-links {
+    font-size: 20px;
+  }
+  .nav-links a {
+    margin: 20px;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .nav-links .contact,
+  .nav-links .login {
+    margin: 10px;
+  }
+  .nav-links .contact {
+    margin-left: 3em;
+  }
+  .nav-links a {
+    margin: 30px;
+  }
+  .btn-addProperty {
+    padding: 10px 10px;
+    font-size: 15px;
+  }
+  .contact img,
+  .login img {
+    width: 10px;
+  }
+  .btn-addProperty img {
+    display: none;
+  }
+}
+@media only screen and (min-width: 973px) and (max-width: 1166px) {
+  .nav-links {
+    font-size: 15px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .nav-links .contact,
+  .nav-links .login {
+    margin: 15px;
+  }
+  .nav-links .contact {
+    margin-left: 3em;
+  }
+  .nav-links a {
+    margin: 20px;
+  }
+  .btn-addProperty {
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+  .contact img,
+  .login img {
+    width: 10px;
+  }
+  .btn-addProperty img {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 972px) {
+  .nav-links {
+    font-size: 13px;
+  }
+  .logo {
+    font-size: 14px;
+  }
+  .nav-links a {
+    margin: 10px;
+  }
+  .btn-addProperty {
+    padding: 8px 8px;
+    font-size: 12px;
+  }
+  .contact img,
+  .login img {
+    width: 8px;
+  }
+  .btn-addProperty img {
+    display: none;
+  }
+}
+/*responsive: Switch to hamburger menu on small screens*/
+@media only screen and (max-width: 766px) {
+  .icon-menu {
+    display: block;
+    cursor: pointer;
+  }
+  .btn-addProperty,
+  .nav-links {
+    display: none;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    top: 70px;
+    right: 0px;
+    background-color: var(--c3--);
+  }
+  .nav-links .contact,
+  .nav-links .login {
+    margin-left: 5px;
+  }
+
+  .nav-links a {
+    margin: 1.6em;
+    padding: 15px 15em;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a:hover {
+    background-color: var(--c1--);
+    transition: 0.4s ease;
+  }
 }
