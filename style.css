@@ -5,9 +5,8 @@
   font-family: "Poppins";
 }
 :root {
-  --c1--: rgba(221, 221, 221, 0.356);
-  --c2--: white;
-  --c3--: rgba(235, 103, 83, 1);
+  --c1--: white;
+  --c2--: rgba(235, 103, 83, 1);
 }
 body {
   background-color: var(--c1--);
@@ -16,6 +15,7 @@ body {
   max-width: 1600px;
   margin: 0 auto;
   padding: 1.5em;
+  width: 100%;
 }
 a {
   text-decoration: none;
@@ -27,7 +27,8 @@ header {
   align-items: center;
   justify-content: space-between;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
+  margin-bottom: 13px;
 }
 .logo {
   font-size: 1.9rem;
@@ -55,7 +56,7 @@ header {
   padding: 0.5em 0.8em;
   border-radius: 20px;
   border: none;
-  background-color: var(--c3--);
+  background-color: var(--c2--);
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0;
@@ -68,6 +69,109 @@ header {
   text-decoration: underline;
   transition: 0.2s ease;
 }
+/*hero*/
+.hero-img img {
+  width: 100%;
+  height: 47em;
+}
+/*searcg bar*/
+.search {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -6em;
+  right: -11em;
+}
+
+.search-background {
+  /*white background */
+  display: flex;
+  background: var(--c1--);
+  width: 75%;
+  height: 5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 12px 12px 12px;
+}
+.tab {
+  font-size: 16px;
+  color: rgba(113, 113, 113, 1);
+  padding: 7px 15px;
+
+  background: rgb(245, 245, 245);
+  border: none;
+  cursor: pointer;
+}
+.tab-option {
+  display: flex;
+}
+.tab.active {
+  color: black;
+  font-weight: 600;
+  background: white;
+  border-bottom: 1px solid rgba(113, 113, 113, 0.226);
+}
+.search-location,
+.property-type {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+}
+.search-location label,
+.property-type label {
+  margin-bottom: 10px;
+  margin-right: 7em;
+  font-weight: 600;
+}
+.search-location input,
+.price-input input {
+  border: none;
+}
+.property-type select {
+  border: none;
+}
+.price-input {
+  margin: 9px;
+  margin-left: 4em;
+}
+.price-input label {
+  margin-left: 2px;
+  font-weight: 600;
+}
+.price-input input {
+  margin-top: 13px;
+  width: 4em;
+}
+
+.advanced-filters {
+  display: flex;
+  margin: -2.5em 0 0 15em;
+  font-weight: 600;
+}
+.advanced-filters img {
+  margin-right: 8px;
+}
+.search-btn {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 9px;
+  border: 1px solid rgba(235, 103, 83, 1);
+  background: rgba(235, 103, 83, 1);
+  margin: -2em 0 0 27em;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input:focus {
+  outline: none;
+}
+select:focus {
+  outline: none;
+}
+
 /*responsive*/
 @media only screen and (min-width: 1400px) and (max-width: 1552px) {
   .nav-links {
@@ -181,7 +285,7 @@ header {
     align-items: center;
     top: 70px;
     right: 0px;
-    background-color: var(--c3--);
+    background-color: var(--c2--);
   }
   .nav-links .contact,
   .nav-links .login {
@@ -198,5 +302,8 @@ header {
   .nav-links a:hover {
     background-color: var(--c1--);
     transition: 0.4s ease;
+  }
+  .hero-img img {
+    height: 40em;
   }
 }
