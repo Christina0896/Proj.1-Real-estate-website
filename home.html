@@ -66,12 +66,27 @@
                 </div>
                 <div class="advanced-filters">
                   <img src="icons/advance-filters.svg" alt="" />
-                  <a href="" id="filters-curtain">Advanced Filters</a>
+                  <a
+                    href="javascript:void(0);"
+                    id="filters-curtain"
+                    onclick="openNav()"
+                    >Advanced Filters</a
+                  >
                 </div>
+                <div class="curtain-menu">
+                  <div class="filters">
+                    <div class="close">
+                      <span class="close-btn" onclick="closeNav()">X</span>
+                    </div>
+                    <h2>Filters</h2>
+                    <form action=""></form>
+                  </div>
+                </div>
+
                 <div>
                   <button class="search-btn">
-                    <span>Search</span>
-                    <span> <img src="icons/search.png" alt="" /></span>
+                    <span><a href="">Search</a></span>
+                    <span> </span>
                   </button>
                 </div>
               </div>

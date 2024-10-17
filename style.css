@@ -26,7 +26,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 13px;
 }
@@ -73,8 +73,9 @@ header {
 .hero-img img {
   width: 100%;
   height: 47em;
+  border-radius: 12px 12px 12px 12px;
 }
-/*searcg bar*/
+/*search bar*/
 .search {
   display: flex;
   flex-direction: column;
@@ -93,10 +94,9 @@ header {
   border-radius: 0px 12px 12px 12px;
 }
 .tab {
-  font-size: 16px;
+  font-size: 14px;
   color: rgba(113, 113, 113, 1);
   padding: 7px 15px;
-
   background: rgb(245, 245, 245);
   border: none;
   cursor: pointer;
@@ -107,7 +107,7 @@ header {
 .tab.active {
   color: black;
   font-weight: 600;
-  background: white;
+  background: var(--c1--);
   border-bottom: 1px solid rgba(113, 113, 113, 0.226);
 }
 .search-location,
@@ -157,8 +157,8 @@ header {
   font-weight: 500;
   padding: 0.5em 1em;
   border-radius: 9px;
-  border: 1px solid rgba(235, 103, 83, 1);
-  background: rgba(235, 103, 83, 1);
+  border: 1px solid var(--c2--);
+  background: var(--c2--);
   margin: -2em 0 0 27em;
 }
 input[type="number"]::-webkit-inner-spin-button,
@@ -171,7 +171,32 @@ input:focus {
 select:focus {
   outline: none;
 }
-
+/*Advanced filters curtain*/
+.curtain-menu {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.61); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it's on top */
+  padding: 20px;
+  box-sizing: border-box;
+}
+.curtain-menu .close {
+  color: black;
+  font-size: 18px;
+  text-align: end;
+  cursor: pointer;
+}
+.filters {
+  background-color: var(--c1--);
+  width: 40%;
+  height: 98%;
+  margin-left: 35em;
+  border-radius: 12px 12px 12px 12px;
+}
 /*responsive*/
 @media only screen and (min-width: 1400px) and (max-width: 1552px) {
   .nav-links {
@@ -271,19 +296,20 @@ select:focus {
 /*responsive: Switch to hamburger menu on small screens*/
 @media only screen and (max-width: 766px) {
   .icon-menu {
-    display: block;
+    display: flex;
     cursor: pointer;
   }
   .btn-addProperty,
   .nav-links {
     display: none;
   }
-  .nav-links {
-    display: none;
+  .nav-links.active {
+    display: flex;
     position: absolute;
     flex-direction: column;
     align-items: center;
-    top: 70px;
+    width: 100%;
+    top: 80px;
     right: 0px;
     background-color: var(--c2--);
   }
@@ -293,14 +319,12 @@ select:focus {
   }
 
   .nav-links a {
-    margin: 1.6em;
-    padding: 15px 15em;
+    margin: 0.5em;
+    padding: 15px 10em;
   }
-  .nav-links.open {
-    display: flex;
-  }
+
   .nav-links a:hover {
-    background-color: var(--c1--);
+    background-color: rgba(255, 255, 255, 0.219);
     transition: 0.4s ease;
   }
   .hero-img img {
