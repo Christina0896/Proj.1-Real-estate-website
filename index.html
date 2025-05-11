@@ -4,91 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>House Hunter</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="global-style.css" />
+    <link rel="stylesheet" href="index.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
+      <!-- Header Section -->
       <header>
-        <a href="home.html"><h1 class="logo">House Hunter</h1></a>
-        <nav class="nav-links">
-          <a href="home.html">Home</a>
+        <nav class="nav-links" id="nav-links">
+          <!-- Logo -->
+          <h1 class="logo"><a href="index.html">House Hunter</a></h1>
+          <!-- Navigation Section -->
           <a href="">Buy</a>
           <a href="">Sell</a>
           <a href="">Rent</a>
-          <a href="" class="contact"
-            ><img src="icons/contact.png" alt="" />Contact us</a
-          >
-          <a href="" class="login"
-            ><img src="icons/login.png" alt="" />Login/Register</a
-          >
+          <a href="" class="contact"><img src="icons/contact.png" alt="" />Contact us</a>
+          <a href="" class="login"><img src="icons/login.png" alt="" />Login/Register</a>
+          <button type="button" class="btn-addProperty">Add property<img src="icons/up-arrow.png" alt="" /></button>
         </nav>
-        <button type="button" class="btn-addProperty">
-          Add property<img src="icons/up-arrow.png" alt="" />
-        </button>
 
-        <div class="icon-menu">
-          <img src="icons/hamburger-menu.png" alt="Menu" />
-        </div>
+        
       </header>
+    
       <main>
+        <!-- Hero Section -->
         <section class="hero">
           <div class="hero-img"><img src="images/house 1.jpg" alt="" /></div>
-          <form class="search" action="">
+          <form class="search-container" action="">
             <div class="tab-option">
               <button type="button" class="tab active">All</button>
               <button type="button" class="tab">For Sale</button>
               <button type="button" class="tab">For Rent</button>
             </div>
-            <div class="search-background">
-              <div class="search-location">
+            <div class="search">
+              <div class="search-location search-group">
                 <label for="">Search</label>
-                <input
-                  type="text"
-                  id="search-location"
-                  placeholder="Enter location" />
+                <input type="text" id="search-location" placeholder="Enter location" />
               </div>
-              <div class="property-type">
-                <label for="">Location</label>
-                <select name="" id="property-type">
-                  <option value="">All</option>
-                  <option value="">House</option>
-                  <option value="">Apartment</option>
-                  <option value="">Commercial</option>
-                </select>
-              </div>
-              <div class="price-input">
-                <label for="">Price Range</label>
+              <div class="property-type search-group">
+                <label for="">Property Type</label>
                 <div>
+                  <select name="" id="property-type">
+                    <option value="">All</option>
+                    <option value="">House</option>
+                    <option value="">Apartment</option>
+                    <option value="">Commercial</option>
+                  </select>
+                </div>
+              </div>
+              <div class="price-input search-group">
+                <label for="">Price Range</label>
+                <div class="price-range">
                   <input type="number" class="input-min" placeholder="Min" />
                   <span class="separator">-</span>
                   <input type="number" class="input-max" placeholder="Max" />
                 </div>
-                <div class="advanced-filters">
-                  <img src="icons/advance-filters.svg" alt="" />
-                  <a
-                    href="javascript:void(0);"
-                    id="filters-curtain"
-                    onclick="openNav()"
-                    >Advanced Filters</a
-                  >
-                </div>
-                <div class="curtain-menu">
-                  <div class="filters">
-                    <div class="close">
-                      <span class="close-btn" onclick="closeNav()">X</span>
-                    </div>
-                    <h2>Filters</h2>
-                    <form action=""></form>
+              </div>
+              <div class="advanced-filters">
+                <a href="javascript:void(0);" id="filters-curtain" onclick="openNav()">Advanced Filters</a>
+              </div>
+              <div class="curtain-menu">
+                <div class="filters">
+                  <div class="close">
+                    <span class="close-btn" onclick="closeNav()">X</span>
                   </div>
+                  <h2>Filters</h2>
                 </div>
-
-                <div>
-                  <button class="search-btn">
-                    <span><a href="">Search</a></span>
-                    <span> </span>
-                  </button>
-                </div>
+              </div>
+              <div class="search-btn-container search-group">
+                <button class="search-btn">Search</button>
               </div>
             </div>
           </form>
