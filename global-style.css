@@ -6,10 +6,13 @@
   font-family: 'Poppins';
 }
 :root {
-  --background: white;
-  --button: rgba(235, 103, 83, 1);
+  --body_background: #f9f9f9;
+  --background: #ffffff;
+  --button: #eb6753;
 }
-
+body {
+  background-color: var(--body_background);
+}
 .container {
   max-width: 1600px;
   margin: 0 auto;

@@ -157,6 +157,87 @@ select:focus {
   margin-left: 35em;
   border-radius: 12px 12px 12px 12px;
 }
+
+/*Property list*/
+.property-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 7em 0 1.5em 0;
+}
+.property-list {
+  display: flex;
+  gap: 5em;
+  margin-top: 1em;
+}
+.property-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.property-list-item :hover {
+  cursor: pointer;
+  color: var(--button);
+}
+.property-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+/*card*/
+.property-card {
+  width: 365px;
+  height: 450px;
+  background-color: var(--background);
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.048);
+  border-radius: 16px;
+}
+
+.card-img {
+  width: 335px;
+  height: 252px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.card-location {
+  display: flex;
+  border-bottom: 1px solid rgba(113, 113, 113, 0.226);
+  margin: 1em 0 0.5em 0;
+  padding-bottom: 0.5em;
+}
+.card-location h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.card-body h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.card-img {
+  object-fit: cover;
+  border-radius: 16px;
+}
+.card-features {
+  margin: 0.5em 0 0.5em 0;
+  display: flex;
+  align-items: center;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(113, 113, 113, 0.226);
+  padding-top: 1em;
+}
+.card-features img {
+  margin-right: 0.5em;
+}
+.feature-icon2,
+.feature-icon3 {
+  margin-left: 0.5em;
+}
+
 /*responsive*/
 @media only screen and (min-width: 1400px) and (max-width: 1552px) {
   .nav-links {
